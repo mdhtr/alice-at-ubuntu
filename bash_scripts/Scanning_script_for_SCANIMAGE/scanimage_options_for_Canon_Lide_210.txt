@@ -1,0 +1,65 @@
+MAN SCANIMAGE
+Options specific to device "Canon LiDE 210":
+  Scan Mode:
+    --mode Color|Gray|Lineart [Color]
+        Selects the scan mode (e.g., lineart, monochrome, or color).
+    --source Flatbed|Transparency Adapter [inactive]
+        Selects the scan source (such as a document-feeder).
+    --preview[=(yes|no)] [no]
+        Request a preview-quality scan.
+    --depth 8|16 [8]
+        Number of bits per sample, typical values are 1 for "line-art" and 8
+        for multibit scans.
+    --resolution 1200|600|300|150|100|75dpi [300]
+        Sets the resolution of the scanned image.
+  Geometry:
+    -l 0..213.8mm [0]
+        Top-left x position of scan area.
+    -t 0..300mm [0]
+        Top-left y position of scan area.
+    -x 0..213.8mm [213.8]
+        Width of scan-area.
+    -y 0..300mm [300]
+        Height of scan-area.
+  Enhancement:
+    --custom-gamma[=(yes|no)] [no]
+        Determines whether a builtin or a custom gamma-table should be used.
+    --gamma-table 0..65535,... [inactive]
+        Gamma-correction table.  In color mode this option equally affects the
+        red, green, and blue channels simultaneously (i.e., it is an intensity
+        gamma table).
+    --red-gamma-table 0..65535,... [inactive]
+        Gamma-correction table for the red band.
+    --green-gamma-table 0..65535,... [inactive]
+        Gamma-correction table for the green band.
+    --blue-gamma-table 0..65535,... [inactive]
+        Gamma-correction table for the blue band.
+    --swdeskew[=(yes|no)] [no]
+        Request backend to rotate skewed pages digitally
+    --swcrop[=(yes|no)] [no]
+        Request backend to remove border from pages digitally
+    --swdespeck[=(yes|no)] [no]
+        Request backend to remove lone dots digitally
+    --despeck 1..9 (in steps of 1) [1]
+        Maximum diameter of lone dots to remove from scan
+  Extras:
+    --lamp-off-time 0..60 [15]
+        The lamp will be turned off after the given time (in minutes). A value
+        of 0 means, that the lamp won't be turned off.
+    --threshold 0..100% (in steps of 1) [inactive]
+        Select minimum-brightness to get a white point
+    --threshold-curve 0..127 (in steps of 1) [inactive]
+        Dynamic threshold curve, from light to dark, normally 50-65
+    --disable-dynamic-lineart[=(yes|no)] [inactive]
+        Disable use of a software adaptive algorithm to generate lineart
+        relying instead on hardware lineart.
+    --disable-interpolation[=(yes|no)] [no]
+        When using high resolutions where the horizontal resolution is smaller
+        than the vertical resolution this disables horizontal interpolation.
+    --color-filter Red|Green|Blue|None [inactive]
+        When using gray or lineart this option selects the used color.
+  Sensors:
+  Buttons:
+    --clear-calibration []
+        Clear calibration cache
+

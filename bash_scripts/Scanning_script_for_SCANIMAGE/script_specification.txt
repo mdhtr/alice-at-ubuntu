@@ -1,0 +1,20 @@
+#Automatization of "scanimage" to create sequentially numbered output.
+
+#Standard use of scanimage:
+#scanimage -x 100 -y 100 --mode Lineart --filename /home/agi/SCAN/file.pnm
+#
+#$date=`date +%Y%m%d%H%M%S` # i.e. 20121201184522
+#scanimage -x $x -y $y --mode $mode --filename $HOME/SCAN/$date.pnm
+
+#what this program has to do:
+#DONE# ask for document details: scan area, scan mode
+#have a standard scan location ie /home/user/scan -- now scans to script directory.
+#DONE# ask for permission to scan before each scan, and have option to 
+#DONE# give sequentially growing filenames to scanned files.
+#DONE# actually this could be the precise date and time. it is not possible to scan 2 docs within the same second.
+
+######NEW IDEAS#####
+#change color mode
+#return to beginning to change page size and choose color mode
+#when lineart be able to set threshold 45 for darker paper
+
