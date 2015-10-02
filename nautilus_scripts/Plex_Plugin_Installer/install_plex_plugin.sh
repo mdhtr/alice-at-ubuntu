@@ -5,7 +5,7 @@
 # run this script by right clicking on the directory you want to install
 install_plugin () {
 	# standard feature: install by copying folder
-	# future enhancement: install from ZIP file
+	# TODO could install from ZIP file
 
 	PARAMETERS=( "$@" )               ## array containing all params passed to the script
 
@@ -29,6 +29,11 @@ install_plugin () {
 					echo -n "A package with the same name is already installed. Would you like to overwrite it? (yes/no): "; read overwrite 
 					if [[ $overwrite == [Yy][Ee][Ss] || $overwrite == [Yy] ]]; then 
 						sudo rm -R "$installed_package"
+						# TODO needs to remove cache too
+						#identifier='com.plexapp.plugins.' + "" # package name lowercase without '.bundle' (also found in Info.plist)
+						#sudo rm -R "$PLUGIN_FOLDER"'Plug-in Support/Caches/'"$identifier"
+						#sudo rm -R "$PLUGIN_FOLDER"'Plug-in Support/Data/'"$identifier"
+						
 					else
 						echo "You chose not to overwrite $package_name so it will not be processed."
 						continue
