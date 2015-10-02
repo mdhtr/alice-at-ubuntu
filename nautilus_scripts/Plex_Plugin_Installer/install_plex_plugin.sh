@@ -61,6 +61,7 @@ install_plugin () {
 # when finished with all packages, restart plex server.
 if [[ $need_to_restart_server = true ]]; then 
 	sudo service plexmediaserver stop
+	sleep 5
 	sudo service plexmediaserver start
 	
 	echo "Installation complete. Your new plug-in should show up now in PLEX."
