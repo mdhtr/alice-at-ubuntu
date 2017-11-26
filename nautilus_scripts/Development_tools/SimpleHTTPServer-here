@@ -1,0 +1,16 @@
+#!/bin/bash
+# NAUTILUS SCRIPT
+# Ubuntu 16.04
+# Start up a static file server in the current directory on the given port
+# uses Python2 SimpleHTTPServer module
+
+runpython () {
+	# user input port
+	echo -n "port number: "; read port
+	python -m SimpleHTTPServer $port
+}
+# run the script in the terminal window
+export -f runpython
+# leave terminal open
+cd $NAUTILUS_SCRIPT_CURRENT_URI
+gnome-terminal --execute bash -c "runpython; bash"

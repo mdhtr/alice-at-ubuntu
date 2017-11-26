@@ -1,6 +1,0 @@
-#!/bin/sh
-# for Precise Pangolin
-
-xrandr -o left
-xsetwacom set 'Serial Wacom Tablet stylus' Rotate CCW
-xsetwacom set 'Serial Wacom Tablet eraser' Rotate CCW

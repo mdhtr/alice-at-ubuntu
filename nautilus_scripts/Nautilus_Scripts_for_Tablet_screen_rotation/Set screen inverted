@@ -1,6 +1,0 @@
-#!/bin/sh
-# for Precise Pangolin
-
-xrandr -o inverted
-xsetwacom set 'Serial Wacom Tablet stylus' Rotate HALF
-xsetwacom set 'Serial Wacom Tablet eraser' Rotate HALF
